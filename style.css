@@ -1,0 +1,147 @@
+:root {
+    /* ### Primary -  */
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    /* ### Neutral -  */
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img,
+picture,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    background-image: url("images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-color: var(--Pale-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Red Hat Display', sans-serif;
+
+}
+
+@media (min-width: 375px) {
+    body {
+        background-image: url("images/pattern-background-desktop.svg");
+        background-repeat: no-repeat;
+        background-color: var(--Pale-blue);
+        height: 100vh;
+    }
+}
+
+.container {
+    background-color: white;
+    overflow: hidden;
+    border-radius: 1rem;
+    display: grid;
+    gap: 1.5rem;
+    min-width: 360px;
+    max-width: 420px;
+    filter: drop-shadow(0 10px 5px hsla(224, 23%, 55%, 0.3));
+}
+
+.texts-content {
+    text-align: center;
+    margin: 0 2rem;
+}
+
+.texts-content h1 {
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--Dark-blue);
+}
+
+.texts-content p {
+    color: var(--Desaturated-blue);
+    line-height: 1.5rem;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--Very-pale-blue);
+    border-radius: .6rem;
+    margin: 0 1.3rem;
+    position: relative;
+}
+
+.price a {
+    color: var(--Bright-blue);
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.price a:hover {
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+}
+
+.payment {
+    margin-left: 3.2rem;
+    font-size: .8rem;
+    line-height: 1.3rem;
+}
+
+.payment span {
+    font-weight: 900;
+    color: var(--Dark-blue);
+}
+
+.payment p {
+    color: var(--Desaturated-blue);
+}
+
+.payment:before {
+    width: 48px;
+    height: 48px;
+    content: " ";
+    background-image: url("images/icon-music.svg");
+    position: absolute;
+    left: 1rem;
+    top: .8rem;
+
+}
+
+button {
+    margin: 0 1.3rem;
+    padding: .9rem;
+    border-radius: .8rem;
+    border: none;
+    background-color: var(--Bright-blue);
+    color: white;
+    font-weight: 700;
+    filter: drop-shadow(0 10px 5px hsla(224, 23%, 55%, 0.3));
+}
+
+button:hover {
+    background-color: var(--Desaturated-blue);
+}
+
+.cancel {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    font-size: .8rem;
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+}
+
+.cancel:hover {
+    color: var(--Dark-blue);
+}
